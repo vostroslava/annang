@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#0a0a1a">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>С Новым годом, любимая ❤️</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Snow Canvas -->
+    <canvas id="snow-canvas"></canvas>
+    
+    <!-- Confetti Canvas -->
+    <canvas id="confetti-canvas"></canvas>
+
+    <!-- Main Container -->
+    <main class="container">
+        <!-- Header with greeting -->
+        <header class="greeting">
+            <h1 class="title">С Новым годом, любимая ❤️</h1>
+            <p class="subtitle">Пусть этот год принесёт нам ещё больше моментов вместе ✨</p>
+        </header>
+
+        <!-- Tree Container -->
+        <div class="tree-wrapper">
+            <div class="tree-container" id="tree-container">
+                <img src="./assets/tree.jpg" alt="Новогодняя ёлка" class="tree-image" id="tree-image">
+                
+                <!-- Star on top (easter egg) -->
+                <div class="star" id="star" aria-label="Звезда на ёлке">
+                    <svg viewBox="0 0 50 50" class="star-svg">
+                        <polygon points="25,2 32,18 50,18 36,28 42,45 25,35 8,45 14,28 0,18 18,18" fill="url(#starGradient)"/>
+                        <defs>
+                            <linearGradient id="starGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#FFD700"/>
+                                <stop offset="50%" style="stop-color:#FFF8DC"/>
+                                <stop offset="100%" style="stop-color:#FFD700"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                
+                <!-- Ornament slots will be positioned here -->
+                <div class="ornaments-layer" id="ornaments-layer"></div>
+            </div>
+        </div>
+
+        <!-- Final message (shown after all photos) -->
+        <div class="final-message hidden" id="final-message">
+            <p>Теперь ёлка хранит наши моменты 🎄✨</p>
+        </div>
+
+        <!-- Controls -->
+        <div class="controls">
+            <button class="magic-btn" id="magic-btn">
+                <span class="magic-icon">✨</span>
+                <span>Запустить магию</span>
+            </button>
+            <button class="music-btn" id="music-btn" aria-label="Включить музыку">
+                <span class="music-icon">♫</span>
+            </button>
+        </div>
+    </main>
+
+    <!-- Photo Modal -->
+    <div class="modal-overlay hidden" id="modal-overlay">
+        <div class="modal">
+            <button class="modal-close" id="modal-close" aria-label="Закрыть">&times;</button>
+            <div class="modal-image-wrapper">
+                <img src="" alt="" class="modal-image" id="modal-image">
+            </div>
+            <p class="modal-caption" id="modal-caption"></p>
+        </div>
+    </div>
+
+    <!-- Audio (optional - place your audio file in assets/) -->
+    <audio id="background-music" loop>
+        <source src="./assets/music.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="app.js"></script>
+</body>
+</html>
