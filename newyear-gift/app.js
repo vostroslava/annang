@@ -37,6 +37,8 @@ const PHOTOS = [
     { src: './assets/photos/03.jpg', caption: 'Вместе — значит дома 🥰' },
     { src: './assets/photos/04.jpg', caption: 'Наши маленькие приключения 🚇✨' },
     { src: './assets/photos/05.jpg', caption: 'Люблю тебя бесконечно 💖' },
+    { src: './assets/photos/06.jpg', caption: 'Наша голливудская история 🎬⭐' },
+    { src: './assets/photos/07.jpg', caption: 'Поцелуй под звёздами 💋✨' },
 ];
 
 // ═══════════ ORNAMENT SLOTS ═══════════
